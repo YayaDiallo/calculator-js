@@ -5,10 +5,6 @@ const iThrowError = () => {
   throw new Error('Error thrown');
 };
 
-// it('should return -1 when the value is not present', function() {
-//  assert.equal( [1, 2, 3].indexOf(4), -1 );
-// });
-
 describe('Calculator', function () {
   describe('#constructor()', function () {
     it('should return 0 by default', function () {
