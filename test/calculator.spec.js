@@ -14,6 +14,15 @@ describe('Calculator', function () {
   });
 
   describe('#set()', function () {
+    it('it should work only with numbers', function () {
+      let calc = new Calculator();
+      const expectedError = new Error('Unable to handle non-numbers values');
+
+      assert.throws(() => {
+        calc.set('toto');
+      }, expectedError);
+    });
+
     it('it should change the inner value of the calculator', function () {
       let calc = new Calculator();
       calc.set(100);
@@ -113,6 +122,15 @@ describe('Calculator', function () {
   });
 
   describe('#divide()', function () {
+    it('it should work only with numbers', function () {
+      let calc = new Calculator();
+      const expectedError = new Error('Unable to handle non-numbers values');
+
+      assert.throws(() => {
+        calc.set('toto');
+      }, expectedError);
+    });
+
     it('should changes the inner value by a difference of X', function () {
       let calc = new Calculator();
       calc.set(100);
@@ -130,8 +148,11 @@ describe('Calculator', function () {
     it('should throw an exception when we divide by 0', function () {
       let calc = new Calculator();
       calc.set(100);
-      calc.divide(0);
-      assert.throws(iThrowError, Error, 'Error thrown');
+      const expectedError = new Error('Unable to divide by zero');
+
+      assert.throws(() => {
+        calc.divide(0);
+      }, expectedError);
     });
 
     it('should (divide) work with other method', function () {
