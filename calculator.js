@@ -5,9 +5,9 @@ class Calculator {
 
   // change inner value
   set(value) {
-    // if (typeof value !== 'number') {
-    //   throw new Error('Unable to handle non-numbers values');
-    // }
+    if (typeof value !== 'number') {
+      throw new Error('Unable to handle non-numbers values');
+    }
 
     this.inner_value = value;
     return this;
