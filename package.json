@@ -5,11 +5,13 @@
   "type": "module",
   "main": "calculator.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha",
+    "coverage": "nyc check-coverage --per-file --branches 80 --functions 80 --lines 80 --statements 80"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^9.2.0"
+    "mocha": "^9.2.0",
+    "nyc": "^15.1.0"
   }
 }

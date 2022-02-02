@@ -41,4 +41,8 @@ class Calculator {
   }
 }
 
+let newCalc = new Calculator();
+
+newCalc.add('Ds');
+
 export default Calculator;
