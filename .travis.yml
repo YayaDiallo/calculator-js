@@ -4,6 +4,7 @@ cache:
 
 language: node_js
 node_js:
+  - 'node'
   - '17'
   - '16'
   - '15'
