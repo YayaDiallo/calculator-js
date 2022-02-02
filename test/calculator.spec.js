@@ -110,8 +110,6 @@ describe('Calculator', function () {
       calc.multiply(-1);
       assert.equal(calc.value(), -100);
     });
-
-    // it changes the inner value by +X
   });
 
   describe('#divide()', function () {
