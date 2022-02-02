@@ -9,6 +9,7 @@ class Calculator {
     return this;
   }
 
+  // reset inner value
   reset() {
     this.inner_value = 0;
     return this;
