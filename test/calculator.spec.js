@@ -1,5 +1,3 @@
-// import assert from 'assert';
-// import Calculator from '../calculator.js';
 const assert = require('assert');
 const Calculator = require('../calculator.js');
 

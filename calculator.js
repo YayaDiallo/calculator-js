@@ -68,7 +68,4 @@ class Calculator {
   }
 }
 
-// const newCalc = new Calculator();
-// console.log(newCalc.set(10).add('2'));
-
 module.exports = Calculator;
