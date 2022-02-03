@@ -71,4 +71,4 @@ class Calculator {
 // const newCalc = new Calculator();
 // console.log(newCalc.set(10).add('2'));
 
-export default Calculator;
+module.exports = Calculator;

@@ -1,5 +1,7 @@
-import assert from 'assert';
-import Calculator from '../calculator.js';
+// import assert from 'assert';
+// import Calculator from '../calculator.js';
+const assert = require('assert');
+const Calculator = require('../calculator.js');
 
 describe('Calculator', function () {
   describe('#constructor()', function () {
