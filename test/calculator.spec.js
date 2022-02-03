@@ -67,109 +67,109 @@ describe('Calculator', function () {
     });
   });
 
-  // describe('#subtract()', function () {
-  //   it('it should not change the value when we subtract 0', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     calc.subtract(0); // subtract value
+  describe('#subtract()', function () {
+    it('it should not change the value when we subtract 0', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      calc.subtract(0); // subtract value
 
-  //     assert.equal(calc.value(), 100);
-  //   });
+      assert.equal(calc.value(), 100);
+    });
 
-  //   it('should changes the inner value by a difference of X', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     let initial = calc.value();
-  //     let sub = 98;
-  //     calc.subtract(sub); // subtract value
+    it('should changes the inner value by a difference of X', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      let initial = calc.value();
+      let sub = 98;
+      calc.subtract(sub); // subtract value
 
-  //     assert.equal(initial - sub, 2);
-  //   });
+      assert.equal(initial - sub, 2);
+    });
 
-  //   it('should (subtract) work with other method', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100).add(3).subtract(4); // subtract value
+    it('should (subtract) work with other method', function () {
+      let calc = new Calculator();
+      calc.set(100).add(3).subtract(4); // subtract value
 
-  //     assert.equal(calc.value(), 99);
-  //   });
-  // });
+      assert.equal(calc.value(), 99);
+    });
+  });
 
-  // describe('#multiply()', function () {
-  //   it('should not change the value when we multiply with 1', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     calc.multiply(1);
-  //     assert.equal(calc.value(), 100);
-  //   });
+  describe('#multiply()', function () {
+    it('should not change the value when we multiply with 1', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      calc.multiply(1);
+      assert.equal(calc.value(), 100);
+    });
 
-  //   it('should change to 0 when we multiply with 0', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     calc.multiply(0);
-  //     assert.equal(calc.value(), 0);
-  //   });
+    it('should change to 0 when we multiply with 0', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      calc.multiply(0);
+      assert.equal(calc.value(), 0);
+    });
 
-  //   it('should work even with negative values', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     calc.multiply(-1);
-  //     assert.equal(calc.value(), -100);
-  //   });
-  // });
+    it('should work even with negative values', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      calc.multiply(-1);
+      assert.equal(calc.value(), -100);
+    });
+  });
 
-  // describe('#divide()', function () {
-  //   it('it should work only with numbers', function () {
-  //     let calc = new Calculator();
-  //     const expectedError = new Error('Unable to handle non-numbers values');
+  describe('#divide()', function () {
+    it('it should work only with numbers', function () {
+      let calc = new Calculator();
+      const expectedError = new Error('Unable to handle non-numbers values');
 
-  //     assert.throws(() => {
-  //       calc.set('toto');
-  //     }, expectedError);
-  //   });
+      assert.throws(() => {
+        calc.set('toto');
+      }, expectedError);
+    });
 
-  //   it('should changes the inner value by a difference of X', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     calc.divide(2);
-  //     assert.equal(calc.value(), 50);
-  //   });
+    it('should changes the inner value by a difference of X', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      calc.divide(2);
+      assert.equal(calc.value(), 50);
+    });
 
-  //   it('should not change the value when we divide with 1', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     calc.divide(1);
-  //     assert.equal(calc.value(), 100);
-  //   });
+    it('should not change the value when we divide with 1', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      calc.divide(1);
+      assert.equal(calc.value(), 100);
+    });
 
-  //   it('should throw an exception when we divide by 0', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100);
-  //     const expectedError = new Error('Unable to divide by zero');
+    it('should throw an exception when we divide by 0', function () {
+      let calc = new Calculator();
+      calc.set(100);
+      const expectedError = new Error('Unable to divide by zero');
 
-  //     assert.throws(() => {
-  //       calc.divide(0);
-  //     }, expectedError);
-  //   });
+      assert.throws(() => {
+        calc.divide(0);
+      }, expectedError);
+    });
 
-  //   it('should (divide) work with other method', function () {
-  //     let calc = new Calculator();
-  //     calc.set(100).divide(2).add(5);
+    it('should (divide) work with other method', function () {
+      let calc = new Calculator();
+      calc.set(100).divide(2).add(5);
 
-  //     assert.equal(calc.value(), 55);
-  //   });
-  // });
+      assert.equal(calc.value(), 55);
+    });
+  });
 
-  // it('should allow composing functions', function () {
-  //   let calc = new Calculator();
-  //   calc.set(100).add(10);
-  //   assert.equal(calc.value(), 110);
+  it('should allow composing functions', function () {
+    let calc = new Calculator();
+    calc.set(100).add(10);
+    assert.equal(calc.value(), 110);
 
-  //   calc.reset().add(10).multiply(2);
-  //   assert.equal(calc.value(), 20);
+    calc.reset().add(10).multiply(2);
+    assert.equal(calc.value(), 20);
 
-  //   calc.reset().multiply(2).add(10);
-  //   assert.equal(calc.value(), 10);
-  // });
+    calc.reset().multiply(2).add(10);
+    assert.equal(calc.value(), 10);
+  });
 
   describe('#value()', function () {
     // je vérifie que la méthode existe
