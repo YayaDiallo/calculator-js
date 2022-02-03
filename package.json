@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "esm": "^3.2.25",
     "mocha": "^9.2.0",
     "nyc": "^15.1.0"
   }
