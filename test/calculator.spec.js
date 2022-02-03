@@ -47,6 +47,15 @@ describe('Calculator', function () {
   });
 
   describe('#add()', function () {
+    it('it should work only with numbers', function () {
+      let calc = new Calculator();
+      const expectedError = new Error('Unable to handle non-numbers values');
+
+      assert.throws(() => {
+        calc.add('toto');
+      }, expectedError);
+    });
+
     it('it should not change the value when we add 0', function () {
       let calc = new Calculator();
       calc.set(100);
@@ -68,6 +77,15 @@ describe('Calculator', function () {
   });
 
   describe('#subtract()', function () {
+    it('it should work only with numbers', function () {
+      let calc = new Calculator();
+      const expectedError = new Error('Unable to handle non-numbers values');
+
+      assert.throws(() => {
+        calc.subtract('toto');
+      }, expectedError);
+    });
+
     it('it should not change the value when we subtract 0', function () {
       let calc = new Calculator();
       calc.set(100);
@@ -95,6 +113,15 @@ describe('Calculator', function () {
   });
 
   describe('#multiply()', function () {
+    it('it should work only with numbers', function () {
+      let calc = new Calculator();
+      const expectedError = new Error('Unable to handle non-numbers values');
+
+      assert.throws(() => {
+        calc.multiply('toto');
+      }, expectedError);
+    });
+
     it('should not change the value when we multiply with 1', function () {
       let calc = new Calculator();
       calc.set(100);
@@ -123,7 +150,7 @@ describe('Calculator', function () {
       const expectedError = new Error('Unable to handle non-numbers values');
 
       assert.throws(() => {
-        calc.set('toto');
+        calc.divide('toto');
       }, expectedError);
     });
 
@@ -153,9 +180,11 @@ describe('Calculator', function () {
 
     it('should (divide) work with other method', function () {
       let calc = new Calculator();
-      calc.set(100).divide(2).add(5);
+      calc.set(100).divide(10);
+      assert.equal(calc.value(), 10);
 
-      assert.equal(calc.value(), 55);
+      calc.set(20).divide(10).divide(2);
+      assert.equal(calc.value(), 1);
     });
   });
 
